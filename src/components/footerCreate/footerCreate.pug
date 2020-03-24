@@ -1,0 +1,9 @@
+include ../logo/logo
+include ../socials/socials
+
+mixin footerCreate({slogan, socials})
+  .footer-create
+    .footer-create__container
+      +logo()
+      p.footer-create__text= slogan
+      +socials({socials: socials})

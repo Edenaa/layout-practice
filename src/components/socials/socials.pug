@@ -1,0 +1,6 @@
+include ../button/button
+
+mixin socials({socials})
+  .socials
+    each item in socials
+      a(href=item.url, target="_blank", class=`socials__item socials__item_${item.mod}`)

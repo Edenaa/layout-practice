@@ -1,0 +1,19 @@
+include ../logo/logo
+include ../menu/menu
+include ../button/button
+
+mixin header({isLogged, menu, username})
+  header.header
+    .header__container
+      .header__logo-block
+        +logo()
+      .header__menu
+        +menu(menu)
+        if !isLogged
+          .header__buttons.header__login
+            +button({text: 'LOGIN', mod: 'only-border header__enter-button'})
+            +button({text: 'REGISTER', mod: 'default'})
+        else
+          .header__user.header__login= username
+        .header__login_mobile
+          +button({text:'account_circle', mod: 'icon header__button_icon_login'})

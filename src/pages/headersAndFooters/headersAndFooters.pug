@@ -1,0 +1,110 @@
+include ../../components/logo/logo
+include ../../components/header/header
+include ../../components/footer/footer
+include ../../components/footerCreate/footerCreate
+
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Headers & Footers
+  -
+    var menu = [{
+        text: 'Home',
+        link: '#',
+        current: true
+      },
+      {
+        text: 'About Us',
+        link: '#',
+      },
+      {
+        text: 'Services',
+        link: [
+          {
+          text: 'First',
+          link: '#'
+          },
+          {
+          text: 'Second',
+          link: '#'
+          }
+        ],
+      },
+      {
+        text: 'Careers',
+        link: '#',
+      },
+      {
+        text: 'News',
+        link: '#',
+      },
+      {
+        text: 'Documentation',
+        link: '#',
+      }];
+    var footerNavigation = [
+      {
+        title: 'Navigation',
+        links: [
+          {text: 'About Us', url: '#'},
+          {text: 'News', url: '#'},
+          {text: 'Support', url: '#'},
+          {text: 'Products', url: '#'},
+        ]
+      },
+      {
+        title: 'ABOUT US',
+        links: [
+          {text: 'Who we are', url: '#'},
+          {text: 'Our team', url: '#'},
+          {text: 'Careers', url: '#'},
+          {text: 'Investors', url: '#'},
+        ]
+      },
+      {
+        title: 'Support',
+        links: [
+          {text: 'Documentation', url: '#'},
+          {text: 'Community', url: '#'},
+          {text: 'Get in Touch', url: '#'},
+        ]
+      },
+    ];
+    var footerSocials = [
+      {
+        mod: 'twitter',
+        url: 'https://twitter.com/'
+      },
+      {
+        mod: 'facebook',
+        url: 'https://facebook.com/'
+      },
+      {
+        mod: 'instagram',
+        url: 'https://instagram.com/'
+      },
+    ];
+  body.headers-footers
+    .headers-footers__logo
+      +logo({ui:true})
+    .headers-footers__item.headers-footers__item_hight
+      +header({isLogged: false, menu: menu})
+    .headers-footers__item
+      +header({isLogged: true, menu: menu, username: 'Cosmin Negoita'})
+    .headers-footers__item
+      +footer({
+        slogan: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+        navigation: footerNavigation,
+        subscribe: {title: 'Subscribe to our newsletter', 
+          text: 'Receive our latest news and promotions in your inbox!', 
+          placeholder: 'Your email address'},
+        copyText: 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
+        socials: footerSocials,
+      })
+    .headers-footers__item
+      +footerCreate({
+        slogan: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+        socials: footerSocials,
+      })
+

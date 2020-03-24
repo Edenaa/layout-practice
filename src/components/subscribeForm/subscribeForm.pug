@@ -1,0 +1,6 @@
+include ../button/button
+
+mixin subscribeForm({name, placeholder})
+  form.subscribe-form
+    input(type="text", name=name, placeholder=placeholder, class="subscribe-form__input")
+    +button({text:'arrow_forward', mod: 'icon subscribe-form__button'})

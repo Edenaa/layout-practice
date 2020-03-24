@@ -1,0 +1,59 @@
+@import '../../scss/colors.scss';
+
+.header {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 60px;
+    @media(max-width: 1200px) {
+      padding: 15px 20px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+
+    &_icon_login {
+      font-size: 48px;
+      line-height: 41px;
+    }
+  }
+
+  &__enter-button {
+    margin-right: 20px;
+  }
+
+  &__user {
+    padding: 6px 0 7px 30px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 17px;
+    color: $darkShade-50;
+    border-left: 1px solid $darkShade-10;
+  }
+
+  &__login {
+    @media(max-width: 1200px) {
+      display: none;
+    }
+    &_mobile {
+      display: none;
+      @media(max-width: 1200px) {
+        display: block;
+      }
+    }
+  }
+}

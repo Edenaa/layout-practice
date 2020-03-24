@@ -1,0 +1,29 @@
+include ../logo/logo
+include ../subscribeForm/subscribeForm
+include ../socials/socials
+
+mixin footer({slogan, navigation, subscribe: {title, text, placeholder}, copyText, socials})
+  footer.footer
+    .footer__container
+      section.footer__block
+        .footer__logo-block
+          +logo()
+          p.footer__text.footer__text_slogan= slogan
+      
+      section.footer__block
+        .footer__navigation-container
+          each item in navigation
+            .footer__navigation
+              p.footer__subtitle= item.title
+              each links in item.links
+                a(class='footer__link' href=links.url)= links.text
+
+      section.footer__block
+        p.footer__subtitle= title
+        p.footer__text.footer__text_subscribe= text
+        +subscribeForm({name: 'footer-subscribe', placeholder: placeholder})
+
+    .footer__line
+      .footer__copyright-block
+        p.footer__text.footer__text_copyright= copyText
+        +socials({socials: socials})

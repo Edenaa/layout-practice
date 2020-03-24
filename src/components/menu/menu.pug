@@ -1,0 +1,18 @@
+include ../button/button
+
+mixin menu(items)
+  nav.menu.js-menu
+    .menu__container
+      .menu__button-block_mobile
+        +button({text:'menu', mod: 'icon js-button menu__button'})
+      .menu__list.js-menu-list
+        each item in items
+          .menu__item
+            if Array.isArray(item.link)
+              span(class='menu__link menu__link_expander js-menu-expander')= item.text
+              .menu__submenu.js-submenu
+                each subitem in item.link
+                  .menu__submenu_item
+                    a(class='menu__link' href=subitem.link)= subitem.text
+            else
+              a.menu__link(class=item.current && 'menu__link_active' href=item.link)= item.text

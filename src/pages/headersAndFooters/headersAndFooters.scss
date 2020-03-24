@@ -1,0 +1,25 @@
+@import '../../scss/colors.scss';
+
+.headers-footers {
+  margin: 0;
+  background-color: $white-2;
+
+  &__logo {
+    margin: 30px 30px 72px;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 40px;
+    background: $white;
+    box-shadow: 0px 10px 20px $darkShade-5;
+    z-index: 1;
+    &_hight {
+      z-index: 2;
+    }
+  }
+
+  &__menu {
+    display: flex;
+  }
+}
