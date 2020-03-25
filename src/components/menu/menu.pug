@@ -7,7 +7,7 @@ mixin menu(items)
         +button({text:'menu', mod: 'icon js-button menu__button'})
       .menu__list.js-menu-list
         each item in items
-          .menu__item
+          .menu__item(class=item.type && 'menu__item_sub')
             if Array.isArray(item.link)
               span(class='menu__link menu__link_expander js-menu-expander')= item.text
               .menu__submenu.js-submenu

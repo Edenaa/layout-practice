@@ -1,0 +1,14 @@
+extends ../base/base
+
+include ../../components/logo/logo
+
+block title
+  title Headers & Footers
+block content
+  .base-layout__kit
+    .cards
+      .cards__logo
+        +logo({ui: true})
+      .cards__container
+        .cards__column
+          

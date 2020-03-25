@@ -1,0 +1,14 @@
+mixin type({title, text, theme, parentClass})
+  - 
+    const themes = new Map();
+    themes.set('h1', 'type_h1');
+    themes.set('h2', 'type_h2');
+    themes.set('h3', 'type_h3');
+    themes.set('body', 'type_body');
+    
+    let classes = ['type', themes.get(theme)];
+
+  div(class=[classes, parentClass])
+    .type__container
+      p.type__title= title
+      p.type__text= text

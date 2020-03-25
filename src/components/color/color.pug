@@ -1,0 +1,19 @@
+mixin color({title, text, theme, parentClass})
+  - 
+    const themes = new Map();
+    themes.set('100', 'color__cell_bg_dark_100');
+    themes.set('75', 'color__cell_bg_dark_75');
+    themes.set('50', 'color__cell_bg_dark_50');
+    themes.set('25', 'color__cell_bg_dark_25');
+    themes.set('5', 'color__cell_bg_dark_5');
+    themes.set('purple', 'color__cell_bg_purple');
+    themes.set('green', 'color__cell_bg_green');
+    
+    let classes = ['color__cell', themes.get(theme)];
+
+  .color(class=parentClass) 
+    .color__container
+      div(class=classes)
+      .color__info
+        p.color__title= title
+        p.color__text= text

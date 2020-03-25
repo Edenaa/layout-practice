@@ -1,11 +1,9 @@
 @import '../../scss/colors.scss';
 
 .headers-footers {
-  margin: 0;
-  background-color: $white-2;
-
+  
   &__logo {
-    margin: 30px 30px 72px;
+    padding: 30px 30px 72px;
   }
 
   &__item {

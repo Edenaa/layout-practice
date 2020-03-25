@@ -1,13 +1,12 @@
+extends ../base/base
+
 include ../../components/logo/logo
 include ../../components/header/header
 include ../../components/footer/footer
 include ../../components/footerCreate/footerCreate
 
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Headers & Footers
+block title
+  title Headers & Footers
   -
     var menu = [{
         text: 'Home',
@@ -20,6 +19,7 @@ html(lang="en")
       },
       {
         text: 'Services',
+        type: 'submenu',
         link: [
           {
           text: 'First',
@@ -85,26 +85,27 @@ html(lang="en")
         url: 'https://instagram.com/'
       },
     ];
-  body.headers-footers
-    .headers-footers__logo
-      +logo({ui:true})
-    .headers-footers__item.headers-footers__item_hight
-      +header({isLogged: false, menu: menu})
-    .headers-footers__item
-      +header({isLogged: true, menu: menu, username: 'Cosmin Negoita'})
-    .headers-footers__item
-      +footer({
-        slogan: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
-        navigation: footerNavigation,
-        subscribe: {title: 'Subscribe to our newsletter', 
-          text: 'Receive our latest news and promotions in your inbox!', 
-          placeholder: 'Your email address'},
-        copyText: 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
-        socials: footerSocials,
-      })
-    .headers-footers__item
-      +footerCreate({
-        slogan: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
-        socials: footerSocials,
-      })
-
+block content
+  .base-layout__kit
+    .headers-footers
+      .headers-footers__logo
+        +logo({ui:true})
+      .headers-footers__item.headers-footers__item_hight
+        +header({isLogged: false, menu: menu})
+      .headers-footers__item
+        +header({isLogged: true, menu: menu, username: 'Cosmin Negoita'})
+      .headers-footers__item
+        +footer({
+          slogan: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+          navigation: footerNavigation,
+          subscribe: {title: 'Subscribe to our newsletter', 
+            text: 'Receive our latest news and promotions in your inbox!', 
+            placeholder: 'Your email address'},
+          copyText: 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
+          socials: footerSocials,
+        })
+      .headers-footers__item
+        +footerCreate({
+          slogan: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+          socials: footerSocials,
+        })

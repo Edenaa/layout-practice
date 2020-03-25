@@ -1,0 +1,35 @@
+extends ../base/base
+
+include ../../components/logo/logo
+include ../../components/color/color
+include ../../components/type/type
+
+block title
+  title Colors & Type
+block content
+  .colors-type
+    .colors-type__logo
+      +logo({ui: true})
+    .colors-type__container
+      .colors-type__colors
+        +color({title: 'Dark Shade 100%', text: '#1F2041', theme:'100', parentClass: 'colors-type__color_item'})
+        +color({title: 'Dark Shade 75%', text: '#1F2041', theme:'75', parentClass: 'colors-type__color_item'})
+        +color({title: 'Dark Shade 50%', text: '#1F2041', theme:'50', parentClass: 'colors-type__color_item'})
+        +color({title: 'Dark Shade 25%', text: '#1F2041', theme:'25', parentClass: 'colors-type__color_item'})
+        +color({title: 'Dark Shade 5%', text: '#1F2041', theme:'5', parentClass: 'colors-type__color_item'})
+        +color({title: 'Purple', text: '#BC9CFF', theme:'purple', parentClass: 'colors-type__color_item'})
+        +color({title: 'Green', text: '#6FCF97', theme:'green', parentClass: 'colors-type__color_item'})
+      .colors-type__types
+        +type({title: 'H1', 
+          text: 'This one is the sub-section or widget title', theme: 'h1',
+          parentClass: 'colors-type__type_item'})
+        +type({title: 'H2', 
+          text: 'Next one is the item title inside widgets', theme: 'h2',
+          parentClass: 'colors-type__type_item'})
+        +type({title: 'H3', 
+          text: 'This is a label or CTA text', theme: 'h3',
+          parentClass: 'colors-type__type_item'})
+        +type({title: 'Body', 
+          text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.', 
+          theme: 'body',
+          parentClass: 'colors-type__type_item'})

@@ -1,0 +1,58 @@
+@import '../../scss/colors.scss';
+
+.type {
+  &__container {
+    display: flex;
+  }
+
+  &_h1 {
+    max-width: 395px;
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: $darkShade-100;
+  }
+
+  &_h2 {
+    max-width: 350px;
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: $darkShade-100;
+  }
+
+  &_h3 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: $darkShade-100;
+    text-transform: uppercase;
+  }
+
+  &_body {
+    max-width: 380px;
+    font-family: 'Montserrat';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: $darkShade-75;
+  }
+
+  &__title {
+    width: 30px;
+    text-align: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 30px;
+    font-family: 'Montserrat';
+    font-weight: normal;
+    color: $darkShade-25;
+  }
+
+  &__text {
+    margin: 0;
+  }
+}

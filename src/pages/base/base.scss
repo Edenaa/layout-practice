@@ -1,0 +1,11 @@
+@import '../../scss/colors.scss';
+
+.base-layout {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  &__kit {
+    min-height: 100vh;
+    background-color: $white-2;
+  }
+}
