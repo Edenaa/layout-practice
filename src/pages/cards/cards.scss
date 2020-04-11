@@ -5,4 +5,28 @@
   &__logo {
     padding: 30px 30px 72px;
   }
+
+  &__container {
+    display: flex;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    @media(max-width: 1200px) {
+      padding: 15px 20px;
+    }
+  }
+
+  &__column {
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

@@ -1,6 +1,7 @@
 extends ../base/base
 
 include ../../components/logo/logo
+include ../../components/findApartmentsCard/findApartmentsCard
 
 block title
   title Headers & Footers
@@ -11,4 +12,6 @@ block content
         +logo({ui: true})
       .cards__container
         .cards__column
+          .cards__item
+            +findApartmentsCard()
           

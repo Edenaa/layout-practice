@@ -1,0 +1,53 @@
+@import '../../scss/colors.scss';
+@import '../../scss/fontsType.scss';
+
+.dropdown-field {
+
+  &__title {
+    margin-bottom: 6px;
+  }
+
+  &__wrapper {
+    position: relative;
+    &::after {
+      content: 'expand_more';
+      font-family: 'Material Icons';
+      font-size: 24px;
+      line-height: 20px;
+      color: $darkShade-50;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      height: 20px;
+      width: 44px;
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 150px;
+    padding: 12px 32px 12px 15px;
+    background: $white;
+    border: 1px solid $darkShade-25;
+    border-radius: 4px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: $darkShade-75;
+    box-sizing: border-box;
+
+    &::placeholder {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      color: $darkShade-75;
+    }
+  }
+}

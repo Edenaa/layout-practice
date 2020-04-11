@@ -1,0 +1,10 @@
+include ../rangeDates/rangeDates
+
+mixin findApartmentsCard()
+  .find-apartments-card
+    h1.find-apartments-card__title Найдём номера под ваши пожелания
+    form.find-apartments-card__form
+      .find-apartments-card__item
+        +rangeDates({inLabel: 'прибытие', outLabel: 'выезд'})
+      .find-apartments-card__item
+        h3.find-apartments-card__subtitle гости

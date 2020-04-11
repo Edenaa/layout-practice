@@ -1,0 +1,8 @@
+include ../dropdownField/dropdownField
+
+mixin rangeDates({inLabel, outLabel})
+  .range-dates
+    .range-dates__item
+      +dropdownField({title: inLabel, placeholder: 'ДД.ММ.ГГГГ'})
+    .range-dates__item
+      +dropdownField({title: outLabel, placeholder: 'ДД.ММ.ГГГГ'})
